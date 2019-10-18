@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula Login</title>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <form onsubmit="login(event)">
+      <span>
+        <label for="email"><strong>E-mail:</strong></label>
+        <input type="email" id="email" required placeholder="email@dominio.com" autofocus>
+      </span>
+      <span>
+        <label for="password"><strong>Password:</strong></label>
+        <input type="password" id="password" required placeholder="Password">
+      </span>
+        <button>Enter</button>
+     </form>
+    <script>
+        let inpEmail = document.querySelector('#email');
+        let inpPassword = document.querySelector('#password');
+
+        let logEmail = 'admin@gmail.com';
+        let logPass = 'admin';
+
+        function login(event){
+            event.preventDefault();
+            if (inpEmail.value === logEmail){
+                document.querySelector('h1').innerHTML = 'Email Certo'
+            }
+            else {
+                document.querySelector('h1').innerHTML = 'Email Errado'
+            }
+
+
+            if (inpPassword.value === logPass){
+                document.querySelector('h2').innerHTML = 'Senha Certo'
+            }
+            else {
+                document.querySelector('h2').innerHTML = 'Senha Errado'
+            }
+
+        }
+    </script>
+</body>
+</html>
